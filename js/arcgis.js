@@ -51,7 +51,7 @@ require([
     });
 
     $(".toolbar-btn").click(function (e) {
-      var type = e.target.dataset.type;
+      var type = $(e.target).data("type");
       drawType = (drawType !== type) ? type : "";
       if(drawType === "") {
         $(e.target).toggleClass("btn-success");
